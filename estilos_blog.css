@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2? family = Birthstone + Rebote: wght @ 500 &family = Montserrat: wght @ 200 & family = Oswald: wght @ 300 & familia = Fuente + Sans + Pro: wght @ 300 & display = swap ');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgba(32, 32, 32, 0.945);
+}
+.span{
+  color: #ff3e2f;
+}
+
+/* NAVEGADOR*/
+.header {
+    overflow: hidden;
+    background-color: #54504cd0;
+    padding: 10px 10px;
+    padding-right: 30px;
+    font-family: 'Montserrat', sans-serif;
+    width: 100%;
+  }
+  
+
+.header a {
+    float: left;
+    color: white;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 40px;
+    border-radius: 4px;
+  
+  }
+  
+.header a.logo {
+    font-size: 25px;
+    font-weight: bold;
+  }
+  
+  .header a:hover {
+    background-color: white;
+    color: #ff3e2f;
+  }
+  
+
+  .header a.active {
+    background-color: #ff3e2f;
+    color: white;
+  }
+  
+ 
+  .header-right {
+    float: right;
+  }
+  
+  
+  @media screen and (max-width: 500px) {
+    .header a {
+      float: none;
+      display: inline-block;
+      text-align: left;
+    }
+    .header-right {
+      float: none;
+    }
+  }
+#navegacion{
+    height: 100px;
+}
+
+/*CABECERA NOMBRE DEL BLOG*/
+header{
+    background-color: #82E0AA;
+    padding: 3rem 2rem;
+    color: white;
+}
+header h1{
+    font-size: 4rem;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 6px;
+}
+
+/*ARTICULOS*/
+article img{
+    width: 450px;
+    height: auto;
+}
+.container{
+    width: 450px;
+    margin: 0 auto;
+}
+   /*detalle imagen*/
+.movimiento{
+  position: relative;
+  width: 50%;
+}
+
+.imagen {
+  display: block;
+  width: 450px;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #82E0AA;
+  overflow: hidden;
+  width: 200%;
+  height: 0;
+  transition: .5s ease;
+}
+
+.movimiento:hover .overlay {
+  height: 50px;
+}
+
+.tex{
+  white-space: nowrap; 
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+
+.post{
+    background-color: #fff;
+    margin: 1rem 0;
+    border-radius: 0.5rem;
+    padding: 0.25rem 0;
+    cursor: pointer;
+}
+h2{
+  font-size: 30px;
+  font-family: 'Montserrat', sans-serif;
+}
+p{
+  text-indent: 10px;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 14px;
+}
+section h2, section p{
+    margin: 1rem;
+}
+.post:hover{
+    margin: 1.3rem 0;
+}
+.boton{
+  display: inline-block;
+  color: #ff3e2f;
+  background-color: transparent;
+  border: 2px solid #ff3e2f ;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: .1rem;
+  margin-bottom: 10px;
+  transition: .3s ease;
+  transition-property: background-color, color;
+  padding: 10px 10px;
+  text-decoration: none;
+}
+
+.boton:hover{
+  color: white;
+  background-color: #ff3e2f;
+  
+}
+/*PIE DE PAGINA*/
+footer{
+    background-color: black;
+    padding: 2.5rem;
+    color: white;
+    
+}
+
+.pie{
+    float: right;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+}
+.icon{
+  float: left;
+  margin-right: 100px;
+}
+.icon img{
+  width: 40px;
+  padding-left: 10px;
+}
+footer a{
+    transition: color 0.3s ease;
+    color: white;
+    text-decoration: none;
+}
+footer a:hover{
+    color: #fbbd5c;
+}
+
+/*latop*/
+@media only screen and (min-width: 992px) {
+   .container{
+        width: 600px;
+    }
+    .icon{
+      float: left;
+      margin-right: 450px;
+    }
+    .imagen {
+      display: block;
+      width: 600px;
+      height: auto;
+    }
+   
+    
+
+}/*celular*/
+
+@media only screen and (max-width: 600px){
+  .icon{
+    float: left;
+    margin-right: 30px;
+  }
+  .container{
+    margin-top: 90px;
+  }
+}

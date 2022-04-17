@@ -1,0 +1,362 @@
+@import url('https://fonts.googleapis.com/css2? family = Montserrat: wght @ 200 & family = Mr + De + Haviland & family = Oswald: wght @ 300 & family = Poppins: wght @ 200 & family = Source + Sans + Pro: wght @ 300 & display = swap ');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    --skill-porc: 0%;
+}
+/*GENERALES*/
+html{
+    height: 100%;
+}
+body{
+    min-height: 100%;
+    background-image: url(imagenes/oficina2.jpg);
+    letter-spacing: 1px;
+    line-height: 1.5rem;
+}
+.grid-contenedor > *{
+    padding: 10px;
+    text-align: center;
+}
+.span{
+    color: #82E0AA;
+}
+h2{
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.3rem;
+}
+h3{
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem;
+    color: #ff3e2f;
+}
+h4{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    color: #ff3e2f;
+}
+.detalle{
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+}
+p{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 12px;
+}
+
+.fecha{
+    background-color: rgba(56, 54, 54, 0.705);
+}
+
+/*CABECERA*/
+.navegacion{
+    grid-area: navegacion;
+
+}
+.header {
+    overflow: hidden;
+    background-color: #54504cd0;
+    padding: 10px 10px;
+    padding-right: 30px;
+    font-family: 'Montserrat', sans-serif;
+    width: 100%;
+    
+  }
+  
+
+.header a {
+    float: left;
+    color: white;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 40px;
+    border-radius: 4px;
+  
+  }
+  
+.header a.logo {
+    font-size: 25px;
+    font-weight: bold;
+  }
+  
+  .header a:hover {
+    background-color: white;
+    color: #82E0AA;
+  }
+  
+
+  .header a.active {
+    background-color: #82E0AA;
+    color: white;
+  }
+  
+ 
+  .header-right {
+    float: right;
+  }
+  
+  
+  @media screen and (max-width: 600px) {
+    .header a {
+      float: none;
+      display: inline-block;
+      text-align: left;
+      
+    }
+    .header-right {
+      float: none;
+    }
+  }
+
+
+/*DATOS PERSONALES*/
+.datos{
+    grid-area: datos;
+    background-color: #82e0abbb;
+    padding: 40px;
+}
+.img{
+    width: 150px;
+    height: auto;
+    border-radius: 50%;
+}
+.datos h4{
+    font-family: 'Poppins', sans-serif;
+    color: black;
+}
+.span-titulos{
+    color: #ff3e2f;
+    font-size: 1rem;
+}
+.info{
+    text-align: left;
+}
+
+/*EDUCACION*/
+.educacion{
+    grid-area: educacion;
+    background-color: #fef9e7b6;
+    line-height: 1.5rem;
+    padding: 50px;
+}
+.edu{
+    text-align: left ;
+}
+
+/*EXPERIANCIAS*/
+.experiencia{
+    grid-area: experiencia;
+    background-color: #82e0abbb;
+    padding: 50px;
+}
+.exp{
+   padding: 10px; 
+}
+
+/*HABILIDADES*/
+.habilidad{
+    grid-area: habilidad;
+    background-color: #fef9e7b6;
+    padding: 60px;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+}
+
+.habilidad span{
+    line-height: 3rem;
+}
+
+.skill{
+    padding: 2rem 0;
+
+}
+.html{
+    text-transform: uppercase;
+    word-spacing: 250px;
+}
+.css{
+    text-transform: uppercase;
+    word-spacing: 270px;
+}
+.js{
+    text-transform: uppercase;
+    word-spacing: 208px; 
+}
+.python{
+    text-transform: uppercase;
+    word-spacing: 228px;
+}
+.c{
+    text-transform: uppercase;
+    word-spacing: 280px;
+}
+.skill__item{
+    display: block;
+    align-items: center;
+    justify-content: center;
+}
+
+.skill__relleno{
+    margin-left: 150px;
+}
+.skill__relleno, .skill__relleno::after{
+    width: 400px;
+    height: 8px;
+    position: relative;
+    background-color: #888;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.skill__relleno::after{
+    content: '';
+    position: absolute;
+    left: -400px;
+    background-color: #ff3e2f;
+    transition: 2s 4s;
+    animation: skill-bar 3s ease-in-out forwards;
+}
+.skill__relleno--80::after{
+    --skill-porc: 80%;
+}
+.skill__relleno--70::after{
+    --skill-porc: 70%;
+}
+.skill__relleno--60::after{
+    --skill-porc: 60%;
+}
+.skill__relleno--50::after{
+    --skill-porc: 50%;
+}
+.skill__relleno--30::after{
+    --skill-porc: 30%;
+}
+@keyframes  skill-bar{
+    to{
+        transform: translateX(var(--skill-porc));
+    }
+    
+}
+/*PIE DE PAGINA*/
+footer{
+    grid-area: pie;
+    background-color: black;
+    padding: 3rem;
+    color: white;
+}
+.pie{
+    float: right;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+}
+.icon{
+    float: left;
+    margin-right: 500px;
+  }
+  .icon img{
+    width: 40px;
+    padding-left: 10px;
+  }
+footer a{
+    transition: color 0.3s ease;
+    color: white;
+    text-decoration: none;
+}
+footer a:hover{
+    color: turquoise;
+}
+/*MAQUETADO GRID*/
+.grid-contenedor{
+    display: grid;
+    gap: 10px;
+    grid-template-areas: 
+    "navegacion"
+    "datos"
+    "educacion"
+    "habilidad"
+    "experiencia"
+    "pie";
+}
+
+/*RESPONSIVE*/
+
+/*tablets*/
+@media only screen and (min-width: 768px){
+    .grid-contenedor{
+        grid-template-columns: 500px auto;
+        grid-template-rows: 100px 500px 500px 100px;
+        grid-template-areas: 
+        "navegacion navegacion"
+        "datos  habilidad" 
+        "educacion experiencia" 
+        "pie pie";
+    }
+    .habilidad .span{
+        font-size: 20px;
+        line-height: 3rem;
+    }
+    .experiencia{
+        padding: 40px 5px 40px 5px;
+    }
+    .exp{
+       padding: 8px; 
+       line-height: 16px;
+    }.experiencia{
+        grid-area: experiencia;
+        background-color: #82e0abbb;
+        padding: 50px;
+    }
+    .experiencia .detalle{
+        font-size: 13px;
+    }
+    .experiencia p{
+        font-size: 11px;
+    }
+
+   
+}
+
+/*telefono*/
+@media only screen and (max-width:600px){
+    .habilidad .span{
+        font-size: 20px;
+    }
+    .skill{
+        line-height: 2.5rem;
+    }
+    .skill__relleno{
+        margin-left: 30px;
+       
+    }
+    footer a{
+        margin-right: 50px;
+    }
+}
+/*compu*/
+@media only screen and (min-width:1200px){
+    .experiencia{
+        padding: 40px;
+    }
+    .exp{
+       padding: 15px; 
+       line-height: 16px;
+    }.experiencia{
+        padding: 50px;
+    }
+    .experiencia .detalle{
+        font-size: 15px;
+    }
+    .experiencia p{
+        font-size: 12px;
+    }
+    .experiencia h4{
+        font-size: 16px;
+    }
+    .icon{
+        float: left;
+        margin-right: 50px;
+      }
+}
